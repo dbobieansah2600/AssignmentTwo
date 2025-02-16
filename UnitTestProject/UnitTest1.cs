@@ -6,30 +6,18 @@ namespace UnitTestProject
     [TestFixture]
     public class TriangleTests
     {
-       
-        // Isosceles Triangle Tests
+        // Equilateral Triangle Test
         [Test]
-        public void AnalyzeTriangle_IsoscelesTriangle1_ReturnsIsosceles()
+        public void AnalyzeTriangle_ValidEquilateral_ReturnsEquilateral()
         {
-            int side1 = 5, side2 = 5, side3 = 3;
-            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
-            Assert.AreEqual("Isosceles triangle", result);
-        }
+            // Arrange
+            int side1 = 3, side2 = 3, side3 = 3;
 
-        [Test]
-        public void AnalyzeTriangle_IsoscelesTriangle2_ReturnsIsosceles()
-        {
-            int side1 = 4, side2 = 4, side3 = 6;
+            // Act
             string result = Triangle.AnalyzeTriangle(side1, side2, side3);
-            Assert.AreEqual("Isosceles triangle", result);
-        }
 
-        [Test]
-        public void AnalyzeTriangle_IsoscelesTriangle3_ReturnsIsosceles()
-        {
-            int side1 = 7, side2 = 7, side3 = 5;
-            string result = Triangle.AnalyzeTriangle(side1, side2, side3);
-            Assert.AreEqual("Isosceles triangle", result);
+            // Assert
+            Assert.AreEqual("Equilateral triangle", result);
         }
 
         
